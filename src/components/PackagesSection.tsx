@@ -1,6 +1,21 @@
 import { PACKAGES, WHATSAPP_URL, type PackageItem } from "@/lib/siteConfig";
 import { useInView } from "@/hooks/useInView";
-import { Check, Star, Sparkles } from "lucide-react";
+import { Check, Star, Sparkles, Clock, Image, BookOpen, Gift } from "lucide-react";
+
+const includeIcons: Record<string, typeof Image> = {
+  "fotos reveladas": Image,
+  "minutos": Clock,
+  "hora": Clock,
+  "Álbum": BookOpen,
+  "Caixa": Gift,
+};
+
+const getIncludeIcon = (text: string) => {
+  for (const [key, Icon] of Object.entries(includeIcons)) {
+    if (text.includes(key)) return Icon;
+  }
+  return Check;
+};
 
 const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
   const { ref, inView } = useInView();
@@ -38,16 +53,19 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
 
       {/* Includes */}
       <ul className="space-y-3 mb-6">
-        {pkg.includes.map((item) => (
-          <li key={item} className="flex items-start gap-3 text-sm font-body text-foreground">
-            <Check className="w-4 h-4 mt-0.5 text-warm-gold flex-shrink-0" strokeWidth={2.5} />
-            {item}
-          </li>
-        ))}
+        {pkg.includes.map((item) => {
+          const Icon = getIncludeIcon(item);
+          return (
+            <li key={item} className="flex items-start gap-3 text-sm font-body text-foreground">
+              <Icon className="w-4 h-4 mt-0.5 text-warm-gold flex-shrink-0" strokeWidth={2} />
+              {item}
+            </li>
+          );
+        })}
       </ul>
 
       {/* Extras */}
-      <div className="flex items-center gap-2 mb-4 px-3 py-2 rounded-lg bg-champagne/20">
+      <div className="flex items-center gap-2 mb-4 px-3 py-2.5 rounded-xl bg-champagne/20">
         <Sparkles className="w-4 h-4 text-warm-gold flex-shrink-0" />
         <span className="text-xs font-body text-muted-foreground">{pkg.extras}</span>
       </div>
