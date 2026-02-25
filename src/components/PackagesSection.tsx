@@ -24,9 +24,9 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
   return (
     <div
       ref={ref}
-      className={`relative rounded-2xl p-6 md:p-8 transition-all duration-700 ${
+      className={`relative rounded-2xl p-5 md:p-8 transition-all duration-700 ${
         isFeatured
-          ? "bg-background border-2 border-warm-gold/50 shadow-featured scale-[1.02]"
+          ? "bg-background border-2 border-warm-gold/50 shadow-featured"
           : "bg-background border border-border shadow-card"
       } ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
       style={{ transitionDelay: `${index * 150}ms` }}
@@ -41,12 +41,12 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
       )}
 
       {/* Header */}
-      <div className="text-center mb-6">
-        <h3 className="text-xl md:text-2xl font-display font-semibold text-foreground mb-2">{pkg.name}</h3>
+      <div className="text-center mb-5">
+        <h3 className="text-lg md:text-2xl font-display font-semibold text-foreground mb-1">{pkg.name}</h3>
         <div className="flex items-baseline justify-center gap-1">
-          <span className="text-3xl md:text-4xl font-display font-bold text-foreground">{pkg.total}</span>
+          <span className="text-2xl md:text-4xl font-display font-bold text-foreground">{pkg.total}</span>
         </div>
-        <p className="text-sm text-muted-foreground mt-1 font-body">
+        <p className="text-xs text-muted-foreground mt-1 font-body">
           Entrada de <strong className="text-foreground">{pkg.entry}</strong> · {pkg.condition}
         </p>
       </div>
@@ -111,17 +111,17 @@ const PackagesSection = () => {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} id="pacotes" className="py-16 md:py-24 px-5 md:px-12">
-      <div className={`text-center mb-12 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <h2 className="text-2xl md:text-4xl font-display font-semibold mb-3 text-foreground">
+    <section ref={ref} id="pacotes" className="py-12 md:py-24 px-4 md:px-12">
+      <div className={`text-center mb-8 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+        <h2 className="text-xl md:text-4xl font-display font-semibold mb-2 text-foreground">
           Escolha seu pacote
         </h2>
-        <p className="text-sm md:text-base text-muted-foreground font-body max-w-lg mx-auto">
-          Pacotes pensados com carinho para registrar cada momento. Escolha o que combina com você.
+        <p className="text-xs md:text-base text-muted-foreground font-body max-w-lg mx-auto">
+          Pacotes pensados com carinho para registrar cada momento.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-8 max-w-5xl mx-auto">
         {PACKAGES.map((pkg, i) => (
           <PackageCard key={pkg.id} pkg={pkg} index={i} />
         ))}

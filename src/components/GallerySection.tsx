@@ -35,16 +35,16 @@ const GallerySection = () => {
 
   return (
     <>
-      <section ref={ref} id="galeria" className="py-16 md:py-24 bg-secondary/50">
-        <div className={`px-5 md:px-12 mb-8 max-w-2xl mx-auto text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <h2 className="text-2xl md:text-4xl font-display font-semibold mb-3 text-foreground">
+      <section ref={ref} id="galeria" className="py-12 md:py-24 bg-secondary/50">
+        <div className={`px-4 md:px-12 mb-6 max-w-2xl mx-auto text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <h2 className="text-xl md:text-4xl font-display font-semibold mb-2 text-foreground">
             Inspiração do cenário
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground font-body">
+          <p className="text-xs md:text-base text-muted-foreground font-body">
             Um cenário pensado para diferentes composições: mãe & bebê, mãe & filho, ou toda a família.
           </p>
-          <p className="text-xs text-muted-foreground/70 font-body mt-2 italic">
-            * Fotos ilustrativas de inspiração do cenário.
+          <p className="text-[10px] text-muted-foreground/60 font-body mt-1 italic">
+            * Fotos ilustrativas de inspiração.
           </p>
         </div>
 
