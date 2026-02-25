@@ -1,6 +1,5 @@
 import { FAQ_ITEMS } from "@/lib/siteConfig";
 import { useInView } from "@/hooks/useInView";
-import { HelpCircle } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
@@ -12,13 +11,10 @@ const FaqSection = () => {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} id="faq" className="py-16 md:py-24 px-5 md:px-12">
+    <section ref={ref} id="faq" className="py-12 md:py-24 px-4 md:px-12">
       <div className={`max-w-2xl mx-auto transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <div className="text-center mb-8">
-          <div className="w-12 h-12 mx-auto mb-4 rounded-2xl bg-champagne/40 flex items-center justify-center">
-            <HelpCircle className="w-6 h-6 text-warm-gold" strokeWidth={1.5} />
-          </div>
-          <h2 className="text-2xl md:text-4xl font-display font-semibold text-foreground">
+        <div className="text-center mb-6">
+          <h2 className="text-xl md:text-4xl font-display font-semibold text-foreground">
             Dúvidas frequentes
           </h2>
         </div>

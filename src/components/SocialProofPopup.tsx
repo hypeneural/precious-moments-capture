@@ -24,12 +24,12 @@ function generateMessage(index: number): Message {
   const pool: (() => Message)[] = [
     () => ({
       type: "rocket",
-      title: `🚀 ${rand(12, 38)} ensaios reservados nos últimos 30 min`,
+      title: `${rand(12, 38)} ensaios reservados nos últimos 30 min`,
       subtitle: "Reserve agora para garantir horário exclusivo para a sua família.",
     }),
     () => ({
       type: "fire",
-      title: `🔥 ${rand(8, 32)} pessoas vendo esta página agora`,
+      title: `${rand(8, 32)} pessoas vendo esta página agora`,
       subtitle: "As vagas estão esgotando rápido. Não deixe para depois!",
     }),
     () => {
@@ -38,13 +38,13 @@ function generateMessage(index: number): Message {
       const exp = pick(EXPERIENCES);
       return {
         type: "person",
-        title: `🎉 ${name} de ${city} garantiu: ${exp}`,
+        title: `${name} de ${city} garantiu: ${exp}`,
         subtitle: "Sua família pode ser a próxima a viver essa experiência.",
       };
     },
     () => ({
       type: "eyes",
-      title: `👀 ${rand(15, 45)} pessoas visualizando os pacotes`,
+      title: `${rand(15, 45)} pessoas visualizando os pacotes`,
       subtitle: "Garanta o seu antes que as vagas acabem!",
     }),
   ];
