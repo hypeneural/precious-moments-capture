@@ -4,13 +4,14 @@ import gallery3 from "@/assets/gallery-3.png";
 import gallery4 from "@/assets/gallery-4.png";
 
 export const STUDIO = {
-  name: "Studio Maria & Luz",
-  city: "São Paulo, SP",
-  whatsapp: "5511999999999",
-  whatsappDisplay: "(11) 99999-9999",
-  instagram: "@studiomariaeeluz",
-  instagramUrl: "https://instagram.com/studiomariaeeluz",
+  name: "Evydência",
+  city: "Tijucas/SC",
+  whatsapp: "5548998483594",
+  whatsappDisplay: "(48) 99848-3594",
+  instagram: "@estudioevydencia",
+  instagramUrl: "https://instagram.com/estudioevydencia",
   presaleDeadline: "28/11",
+  siteUrl: "https://evydencia.com/catalogo/mae",
 };
 
 export const WHATSAPP_URL = `https://wa.me/${STUDIO.whatsapp}?text=Olá! Quero reservar minha sessão de Dia das Mães 💐`;
@@ -99,32 +100,28 @@ export const PACKAGES: PackageItem[] = [
 
 export const FAQ_ITEMS = [
   {
-    q: "O que está incluso em cada pacote?",
-    a: "Cada pacote inclui uma quantidade específica de fotos reveladas no formato 15x21cm, tempo de sessão no cenário exclusivo de Dia das Mães e a possibilidade de adquirir fotos extras. Confira os detalhes de cada pacote acima.",
+    q: "Como reservar um horário?",
+    a: "A reserva é feita mediante o pagamento da entrada. Pode ser pago por cartão ou PIX através do nosso site.",
   },
   {
-    q: "A entrada garante a vaga?",
-    a: "Sim! Ao realizar o pagamento da entrada online, sua vaga fica garantida e entraremos em contato para agendar o melhor horário.",
+    q: "Como escolho as fotos?",
+    a: "As fotos são escolhidas logo após a sessão. São muitas fotos lindas, portanto pedimos que venha com um tempo livre após a sessão de fotos para a escolha.",
   },
   {
-    q: "Posso parcelar o restante?",
-    a: "Sim! O valor restante pode ser pago na loja física no dia da sessão. Nos pacotes Super Mãe e A melhor mãe do mundo, é possível parcelar em até 3x no cartão.",
+    q: "E se eu quiser mais fotos?",
+    a: "Você pode escolher à vontade as fotos adicionais. Cada foto tem o valor de R$ 20,00 e também serão enviadas pelo WhatsApp e reveladas no tamanho 15x21cm.",
   },
   {
-    q: "Quem pode participar da sessão?",
-    a: "A sessão é para mamães com seus filhos! Pode ser com um bebê, uma criança, dois filhos ou mais. Converse conosco pelo WhatsApp para tirar dúvidas sobre composições especiais.",
+    q: "As fotos podem ser feitas fora do horário comercial?",
+    a: "Sim! Trabalhamos de segunda a segunda no horário estendido. Porém, a procura nessa época é muito grande. Quanto antes agendar, maiores são suas chances de conseguir um horário.",
   },
   {
-    q: "Como funciona a escolha das fotos?",
-    a: "Após a sessão, as melhores fotos serão selecionadas e editadas pela nossa equipe. Você receberá uma galeria para aprovação das fotos que serão reveladas.",
+    q: "Quais formas de pagamento vocês aceitam?",
+    a: "Aceitamos cartões de crédito e PIX para pagamento da entrada. No dia das fotos, o pagamento da sessão e das fotos adicionais podem ser parcelados no cartão conforme o pacote escolhido.",
   },
   {
-    q: "O que acontece se eu precisar remarcar?",
-    a: "Remarcações estão sujeitas à disponibilidade de agenda. Entre em contato pelo WhatsApp com pelo menos 48h de antecedência para verificar datas disponíveis.",
-  },
-  {
-    q: "As vagas são limitadas?",
-    a: "Sim! Trabalhamos com agenda limitada para garantir a qualidade de cada sessão. Recomendamos a reserva antecipada.",
+    q: "Qual é o prazo de entrega das fotos?",
+    a: "Após as fotos serem escolhidas, iniciamos o processo de tratamento. Em até 20 dias úteis elas ficam prontas. Na confirmação da sessão, a data de entrega já será informada.",
   },
 ];
 
