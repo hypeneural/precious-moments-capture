@@ -16,6 +16,12 @@ export const STUDIO = {
 
 export const WHATSAPP_URL = `https://wa.me/${STUDIO.whatsapp}?text=Olá! Quero reservar minha sessão de Dia das Mães 💐`;
 
+export const PACKAGE_URLS: Record<string, string> = {
+  "mamae-coruja": "https://evydencia.com/catalogo/mae/coruja",
+  "super-mae": "https://evydencia.com/catalogo/mae/super-mae",
+  "melhor-mae": "https://evydencia.com/catalogo/mae/melhor-mae",
+};
+
 export const GALLERY_IMAGES = [
   { src: gallery1, alt: "Mãe erguendo bebê com carinho em cenário floral", caption: "Mãe & bebê" },
   { src: gallery2, alt: "Mãe e filho em momento de carinho no estúdio", caption: "Mãe & filho" },
@@ -55,7 +61,7 @@ export const PACKAGES: PackageItem[] = [
     ],
     presale: `Pré-venda até dia ${STUDIO.presaleDeadline}`,
     extras: "2 fotos extras = R$ 40,00",
-    observation: "Entrada online de R$ 98,00 + R$ 98,00 a pagar na loja física no dia da sessão.",
+    observation: "Entrada online de R$ 98,00 + R$ 98,00 a pagar no Estúdio no dia da sessão.",
     cta: "Reservar",
   },
   {
@@ -72,7 +78,7 @@ export const PACKAGES: PackageItem[] = [
     ],
     presale: `Pré-venda até dia ${STUDIO.presaleDeadline}`,
     extras: "6 fotos extras = R$ 120,00",
-    observation: "Entrada online de R$ 120,00 + R$ 330,00 a pagar na loja física no dia da sessão. Parcelável com cartão em até 3x de R$ 110,00.",
+    observation: "Entrada online de R$ 120,00 + R$ 330,00 a pagar no Estúdio no dia da sessão. Parcelável com cartão em até 3x de R$ 110,00.",
     cta: "Reservar agora",
     featured: true,
     badge: "Mais escolhido",
@@ -93,7 +99,7 @@ export const PACKAGES: PackageItem[] = [
     ],
     presale: `Pré-venda até dia ${STUDIO.presaleDeadline}`,
     extras: "10 fotos extras = R$ 200,00",
-    observation: "Entrada online de R$ 180,00 + R$ 705,00 a pagar na loja física no dia da sessão. Parcelável com cartão em até 3x de R$ 235,00.",
+    observation: "Entrada online de R$ 180,00 + R$ 705,00 a pagar no Estúdio no dia da sessão. Parcelável com cartão em até 3x de R$ 235,00.",
     cta: "Reservar experiência completa",
   },
 ];

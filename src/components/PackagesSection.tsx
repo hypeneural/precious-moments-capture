@@ -1,4 +1,4 @@
-import { PACKAGES, WHATSAPP_URL, type PackageItem } from "@/lib/siteConfig";
+import { PACKAGES, PACKAGE_URLS, type PackageItem } from "@/lib/siteConfig";
 import { useInView } from "@/hooks/useInView";
 import { Check, Star, Sparkles, Clock, Image, BookOpen, Gift } from "lucide-react";
 
@@ -82,7 +82,7 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
 
       {/* CTA */}
       <a
-        href={`${WHATSAPP_URL}&text=Olá! Tenho interesse no pacote ${pkg.name}`}
+        href={PACKAGE_URLS[pkg.id] || "#"}
         target="_blank"
         rel="noopener noreferrer"
         className={`block w-full text-center h-14 leading-[3.5rem] rounded-full font-body font-bold text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${

@@ -1,5 +1,4 @@
 import { GALLERY_IMAGES } from "@/lib/siteConfig";
-import { WHATSAPP_URL } from "@/lib/siteConfig";
 import { useInView } from "@/hooks/useInView";
 
 const HeroSection = () => {
@@ -16,6 +15,10 @@ const HeroSection = () => {
       />
       {/* Overlay */}
       <div className="absolute inset-0 bg-hero-overlay" />
+      {/* Illustrative badge */}
+      <span className="absolute top-4 right-4 z-20 px-3 py-1 rounded-full bg-black/40 backdrop-blur-sm text-cream text-[10px] font-body tracking-wide">
+        Foto ilustrativa
+      </span>
 
       {/* Content */}
       <div className={`relative z-10 w-full px-5 pb-10 pt-20 md:px-12 md:pb-16 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
@@ -35,16 +38,8 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-warm-gold font-body font-bold text-base text-champagne-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
-            >
-              Quero reservar minha sessão
-            </a>
-            <a
               href="#pacotes"
-              className="inline-flex items-center justify-center h-14 px-8 rounded-full border-2 border-cream/40 text-cream font-body font-bold text-base backdrop-blur-sm hover:bg-cream/10 transition-all duration-300"
+              className="inline-flex items-center justify-center h-14 px-8 rounded-full bg-warm-gold font-body font-bold text-base text-champagne-foreground shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             >
               Ver pacotes
             </a>
