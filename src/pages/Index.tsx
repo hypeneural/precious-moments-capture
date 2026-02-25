@@ -7,6 +7,7 @@ import FaqSection from "@/components/FaqSection";
 import FinalCtaSection from "@/components/FinalCtaSection";
 import FooterSection from "@/components/FooterSection";
 import StickyBottomBar from "@/components/StickyBottomBar";
+import SocialProofPopup from "@/components/SocialProofPopup";
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <FinalCtaSection />
       <FooterSection />
       <StickyBottomBar />
+      <SocialProofPopup />
     </main>
   );
 };
