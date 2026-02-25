@@ -1,4 +1,4 @@
-import { PACKAGES, PACKAGE_URLS, type PackageItem } from "@/lib/siteConfig";
+import { PACKAGES, PACKAGE_URLS, STUDIO, type PackageItem } from "@/lib/siteConfig";
 import { useInView } from "@/hooks/useInView";
 import { Check, Star, Sparkles, Clock, Image, BookOpen, Gift } from "lucide-react";
 
@@ -64,10 +64,20 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
         })}
       </ul>
 
-      {/* Extras */}
-      <div className="flex items-center gap-2 mb-4 px-3 py-2.5 rounded-xl bg-champagne/20">
-        <Sparkles className="w-4 h-4 text-warm-gold flex-shrink-0" />
-        <span className="text-xs font-body text-muted-foreground">{pkg.extras}</span>
+      {/* Bônus Pré-venda */}
+      <div className="relative mb-4 px-4 py-3 rounded-xl bg-accent/15 border border-accent/30 overflow-hidden">
+        <div className="absolute top-0 right-0 px-2 py-0.5 bg-accent text-accent-foreground text-[9px] font-body font-bold uppercase rounded-bl-lg tracking-wider">
+          Exclusivo pré-venda
+        </div>
+        <div className="flex items-start gap-2.5 mt-2">
+          <Gift className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+          <div>
+            <span className="text-sm font-body font-bold text-foreground block leading-snug">{pkg.extras}</span>
+            <span className="text-[10px] text-muted-foreground font-body mt-1 block">
+              Limitado aos 10 primeiros · Até {STUDIO.presaleDeadline}
+            </span>
+          </div>
+        </div>
       </div>
 
       {/* Observation */}
