@@ -2,6 +2,7 @@ import { useRef, useState, useCallback } from "react";
 import { GALLERY_IMAGES } from "@/lib/siteConfig";
 import { useInView } from "@/hooks/useInView";
 import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
+import OptimizedImage from "@/components/OptimizedImage";
 
 const captions = [
   "Cenário exclusivo de Dia das Mães",
@@ -35,15 +36,15 @@ const GallerySection = () => {
 
   return (
     <>
-      <section ref={ref} id="galeria" className="py-12 md:py-24 bg-secondary/50">
-        <div className={`px-4 md:px-12 mb-6 max-w-2xl mx-auto text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <h2 className="text-xl md:text-4xl font-display font-semibold mb-2 text-foreground">
+      <section ref={ref} id="galeria" className="py-14 md:py-24 bg-secondary/50">
+        <div className={`px-5 md:px-12 mb-6 max-w-2xl mx-auto text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+          <h2 className="text-2xl md:text-4xl font-display font-semibold mb-2 text-foreground">
             Inspiração do cenário
           </h2>
-          <p className="text-xs md:text-base text-muted-foreground font-body">
+          <p className="text-sm md:text-base text-muted-foreground font-body">
             Um cenário pensado para diferentes composições: mãe & bebê, mãe & filho, ou toda a família.
           </p>
-          <p className="text-[10px] text-muted-foreground/60 font-body mt-1 italic">
+          <p className="text-xs text-muted-foreground/60 font-body mt-1.5 italic">
             * Fotos ilustrativas de inspiração.
           </p>
         </div>
@@ -71,21 +72,20 @@ const GallerySection = () => {
                   className="relative rounded-xl overflow-hidden shadow-card aspect-[3/4] w-full group cursor-pointer"
                   aria-label={`Ampliar: ${img.alt}`}
                 >
-                  <img
+                  <OptimizedImage
                     src={img.src}
                     alt={img.alt}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
+                    aspectRatio="3/4"
                   />
                   <div className="absolute inset-0 bg-warm-brown/0 group-hover:bg-warm-brown/20 transition-colors duration-300 flex items-center justify-center">
                     <ZoomIn className="w-8 h-8 text-cream opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-warm-brown/70 to-transparent">
-                    <span className="text-cream text-xs font-body tracking-wide uppercase">{img.caption}</span>
+                    <span className="text-cream text-sm font-body tracking-wide uppercase">{img.caption}</span>
                   </div>
                 </button>
-                <p className="mt-3 text-xs md:text-sm text-muted-foreground font-body text-center italic">
+                <p className="mt-3 text-sm md:text-sm text-muted-foreground font-body text-center italic">
                   {captions[i]}
                 </p>
               </div>

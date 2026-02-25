@@ -22,7 +22,7 @@
     --secondary-foreground: 25 20% 30%;
 
     --muted: 36 15% 92%;
-    --muted-foreground: 25 10% 50%;
+    --muted-foreground: 25 12% 40%;
 
     --accent: 95 15% 55%;
     --accent-foreground: 95 20% 20%;
@@ -65,7 +65,12 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-display;
   }
 }
@@ -114,6 +119,7 @@ html {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }

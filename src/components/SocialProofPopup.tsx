@@ -112,18 +112,17 @@ const SocialProofPopup = () => {
 
   return (
     <div
-      className={`fixed bottom-20 md:bottom-6 left-3 right-3 md:left-auto md:right-6 md:max-w-sm z-[60] cursor-pointer transition-all duration-400 ${
-        exiting
+      className={`fixed bottom-20 md:bottom-6 left-3 right-3 md:left-auto md:right-6 md:max-w-sm z-[60] cursor-pointer transition-all duration-400 ${exiting
           ? "opacity-0 translate-y-4"
           : "opacity-100 translate-y-0 animate-[fade-in-up_0.4s_ease-out]"
-      }`}
+        }`}
       onClick={hide}
       role="status"
       aria-live="polite"
     >
-      <div className="relative bg-background/95 backdrop-blur-lg border border-border rounded-2xl shadow-card-hover p-3.5 pr-10 flex items-start gap-3">
+      <div className="relative bg-background/95 backdrop-blur-lg border border-border rounded-2xl shadow-card-hover p-4 pr-10 flex items-start gap-3">
         {/* Icon */}
-        <div className={`flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center ${bgMap[msg.type]}`}>
+        <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center ${bgMap[msg.type]}`}>
           {iconMap[msg.type]}
         </div>
 
@@ -132,10 +131,10 @@ const SocialProofPopup = () => {
           <p className="text-sm font-bold font-body text-foreground leading-snug">
             {msg.title}
           </p>
-          <p className="text-xs text-muted-foreground font-body mt-0.5 leading-relaxed">
+          <p className="text-sm text-muted-foreground font-body mt-0.5 leading-relaxed">
             {msg.subtitle}
           </p>
-          <p className="text-[10px] text-muted-foreground/60 font-body mt-1">
+          <p className="text-xs text-muted-foreground/60 font-body mt-1">
             Agora mesmo
           </p>
         </div>
@@ -146,10 +145,10 @@ const SocialProofPopup = () => {
             e.stopPropagation();
             hide();
           }}
-          className="absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center text-muted-foreground/50 hover:text-foreground hover:bg-muted transition-colors"
+          className="absolute top-3 right-3 w-7 h-7 rounded-full flex items-center justify-center text-muted-foreground/50 hover:text-foreground hover:bg-muted transition-colors"
           aria-label="Fechar"
         >
-          <X className="w-3.5 h-3.5" />
+          <X className="w-4 h-4" />
         </button>
       </div>
     </div>
