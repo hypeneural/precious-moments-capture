@@ -9,6 +9,10 @@ const captions = [
   "Iluminação aconchegante e natural",
   "Estilo delicado e atemporal",
   "Produzido para valorizar a conexão",
+  "Cada detalhe pensado com carinho",
+  "Momentos que viram recordação",
+  "O abraço que a foto eterniza",
+  "Memórias que ficam para sempre",
 ];
 
 const GallerySection = () => {
@@ -59,13 +63,13 @@ const GallerySection = () => {
 
           <div
             ref={scrollRef}
-            className="flex gap-4 px-5 md:px-12 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+            className="flex gap-3.5 px-5 md:px-12 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
           >
             {GALLERY_IMAGES.map((img, i) => (
               <div
                 key={i}
-                className={`flex-shrink-0 w-[75vw] md:w-[calc(25%-12px)] snap-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
-                style={{ transitionDelay: `${i * 120}ms` }}
+                className={`flex-shrink-0 w-[68vw] md:w-[calc(25%-12px)] snap-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+                style={{ transitionDelay: `${Math.min(i, 4) * 120}ms` }}
               >
                 <button
                   onClick={() => openLightbox(i)}
@@ -85,7 +89,7 @@ const GallerySection = () => {
                     <span className="text-cream text-sm font-body tracking-wide uppercase">{img.caption}</span>
                   </div>
                 </button>
-                <p className="mt-3 text-sm md:text-sm text-muted-foreground font-body text-center italic">
+                <p className="mt-3 text-sm text-muted-foreground font-body text-center italic">
                   {captions[i]}
                 </p>
               </div>

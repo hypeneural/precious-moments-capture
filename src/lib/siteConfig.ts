@@ -1,7 +1,11 @@
-import gallery1 from "@/assets/gallery-1.png";
-import gallery2 from "@/assets/gallery-2.png";
-import gallery3 from "@/assets/gallery-3.png";
-import gallery4 from "@/assets/gallery-4.png";
+import gallery1 from "@/assets/gallery-1.webp";
+import gallery2 from "@/assets/gallery-2.webp";
+import gallery3 from "@/assets/gallery-3.webp";
+import gallery4 from "@/assets/gallery-4.webp";
+import gallery5 from "@/assets/gallery-5.webp";
+import gallery6 from "@/assets/gallery-6.webp";
+import gallery7 from "@/assets/gallery-7.webp";
+import gallery8 from "@/assets/gallery-8.webp";
 
 export const STUDIO = {
   name: "Evydência",
@@ -27,6 +31,10 @@ export const GALLERY_IMAGES = [
   { src: gallery2, alt: "Mãe e filho em momento de carinho no estúdio", caption: "Mãe & filho" },
   { src: gallery3, alt: "Mãe e filho sentados em sofá com cenário iluminado", caption: "Conexão" },
   { src: gallery4, alt: "Mãe com dois filhos em ensaio editorial", caption: "Família" },
+  { src: gallery5, alt: "Momento de amor entre mãe e bebê", caption: "Ternura" },
+  { src: gallery6, alt: "Ensaio familiar com cenário delicado", caption: "Delicadeza" },
+  { src: gallery7, alt: "Mãe e filhos em momento de afeto", caption: "Afeto" },
+  { src: gallery8, alt: "Sessão especial de Dia das Mães", caption: "Memória" },
 ];
 
 export interface PackageItem {
@@ -101,6 +109,7 @@ export const PACKAGES: PackageItem[] = [
     extras: "Bônus pré-venda: +10 fotos extras grátis (valor R$ 200,00)",
     observation: "Entrada online de R$ 180,00 + R$ 705,00 a pagar no Estúdio no dia da sessão. Parcelável com cartão em até 3x de R$ 235,00.",
     cta: "Reservar experiência completa",
+    badge: "Mais completo",
   },
 ];
 
