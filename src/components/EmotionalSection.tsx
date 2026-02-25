@@ -13,10 +13,10 @@ const EmotionalSection = () => {
   return (
     <section ref={ref} className="py-14 md:py-24 px-5 md:px-12">
       <div className={`max-w-2xl mx-auto text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <h2 className="text-2xl md:text-4xl font-display font-semibold mb-4 text-foreground">
+        <h2 className="text-[1.75rem] md:text-4xl font-display font-semibold mb-4 text-foreground leading-tight">
           O tempo passa, mas o <em className="italic text-warm-gold">amor fica</em>
         </h2>
-        <p className="text-base md:text-lg font-body font-light text-muted-foreground leading-relaxed mb-10">
+        <p className="text-lg md:text-xl font-body font-light text-muted-foreground leading-relaxed mb-10">
           Os filhos crescem num piscar de olhos. Um ensaio de Dia das Mães não é só uma foto — é a chance de registrar a conexão real, o abraço apertado, o sorriso verdadeiro.
         </p>
 
@@ -27,8 +27,8 @@ const EmotionalSection = () => {
               <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-champagne/40 flex items-center justify-center">
                 <p.icon className="w-6 h-6 md:w-7 md:h-7 text-warm-gold" strokeWidth={1.5} />
               </div>
-              <span className="text-sm md:text-base font-display font-semibold text-foreground">{p.label}</span>
-              <span className="text-xs md:text-sm font-body text-muted-foreground leading-snug">{p.text}</span>
+              <span className="text-base md:text-lg font-display font-semibold text-foreground">{p.label}</span>
+              <span className="text-sm md:text-base font-body text-muted-foreground leading-snug">{p.text}</span>
             </div>
           ))}
         </div>

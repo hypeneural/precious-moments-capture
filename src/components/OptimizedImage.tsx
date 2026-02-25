@@ -40,7 +40,7 @@ const OptimizedImage = ({
         className={`transition-opacity duration-500 ease-out ${loaded ? "opacity-100" : "opacity-0"} ${className}`}
         loading={priority ? "eager" : "lazy"}
         decoding={priority ? "sync" : "async"}
-        fetchPriority={priority ? "high" : undefined}
+        {...(priority ? { fetchpriority: "high" } as any : {})}
         onLoad={handleLoad}
         {...rest}
       />

@@ -32,30 +32,30 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
     >
       {/* Badge */}
       {pkg.badge && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <span className="inline-flex items-center gap-1.5 px-4 py-1 rounded-full bg-warm-gold text-primary-foreground text-xs font-body font-bold tracking-wide uppercase">
-            <Star className="w-3.5 h-3.5" fill="currentColor" /> {pkg.badge}
+        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+          <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-warm-gold text-primary-foreground text-sm font-body font-bold tracking-wide uppercase">
+            <Star className="w-4 h-4" fill="currentColor" /> {pkg.badge}
           </span>
         </div>
       )}
 
       {/* Header */}
-      <div className="text-center mb-5">
-        <h3 className="text-xl md:text-2xl font-display font-semibold text-foreground mb-1">{pkg.name}</h3>
+      <div className="text-center mb-5 mt-1">
+        <h3 className="text-2xl md:text-2xl font-display font-semibold text-foreground mb-1">{pkg.name}</h3>
         <div className="flex items-baseline justify-center gap-1">
-          <span className="text-3xl md:text-4xl font-display font-bold text-foreground">{pkg.total}</span>
+          <span className="text-[2.25rem] md:text-4xl font-display font-bold text-foreground">{pkg.total}</span>
         </div>
-        <p className="text-sm text-muted-foreground mt-1.5 font-body">
+        <p className="text-base text-muted-foreground mt-2 font-body leading-snug">
           Entrada de <strong className="text-foreground">{pkg.entry}</strong> · {pkg.condition}
         </p>
       </div>
 
       {/* Includes */}
-      <ul className="space-y-3 mb-6">
+      <ul className="space-y-3.5 mb-6">
         {pkg.includes.map((item) => {
           const Icon = getIncludeIcon(item);
           return (
-            <li key={item} className="flex items-start gap-3 text-base font-body text-foreground">
+            <li key={item} className="flex items-start gap-3 text-[1.0625rem] font-body text-foreground">
               <Icon className="w-5 h-5 mt-0.5 text-warm-gold flex-shrink-0" strokeWidth={2} />
               {item}
             </li>
@@ -64,15 +64,15 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
       </ul>
 
       {/* Bônus Pré-venda */}
-      <div className="relative mb-4 px-4 py-3.5 rounded-xl bg-accent/15 border border-accent/30 overflow-hidden">
-        <div className="absolute top-0 right-0 px-2.5 py-0.5 bg-accent text-accent-foreground text-[11px] font-body font-bold uppercase rounded-bl-lg tracking-wider">
+      <div className="relative mb-5 px-4 py-4 rounded-xl bg-accent/15 border border-accent/30 overflow-hidden">
+        <div className="absolute top-0 right-0 px-2.5 py-1 bg-accent text-accent-foreground text-xs font-body font-bold uppercase rounded-bl-lg tracking-wider">
           Exclusivo pré-venda
         </div>
         <div className="flex items-start gap-2.5 mt-2">
           <Gift className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
           <div>
-            <span className="text-sm font-body font-bold text-foreground block leading-snug">{pkg.extras}</span>
-            <span className="text-xs text-muted-foreground font-body mt-1 block">
+            <span className="text-base font-body font-bold text-foreground block leading-snug">{pkg.extras}</span>
+            <span className="text-sm text-muted-foreground font-body mt-1.5 block">
               Limitado aos 10 primeiros · Até {STUDIO.presaleDeadline}
             </span>
           </div>
@@ -80,12 +80,12 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
       </div>
 
       {/* Observation */}
-      <p className="text-sm text-muted-foreground font-body mb-6 leading-relaxed">
+      <p className="text-base text-muted-foreground font-body mb-6 leading-relaxed">
         {pkg.observation}
       </p>
 
       {/* Presale */}
-      <p className="text-xs text-center text-warm-gold font-body font-bold mb-4 tracking-wide uppercase">
+      <p className="text-sm text-center text-warm-gold font-body font-bold mb-4 tracking-wide uppercase">
         {pkg.presale}
       </p>
 
@@ -94,7 +94,7 @@ const PackageCard = ({ pkg, index }: { pkg: PackageItem; index: number }) => {
         href={PACKAGE_URLS[pkg.id] || "#"}
         target="_blank"
         rel="noopener noreferrer"
-        className={`block w-full text-center h-14 leading-[3.5rem] rounded-full font-body font-bold text-base transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${isFeatured
+        className={`block w-full text-center h-[3.5rem] leading-[3.5rem] rounded-full font-body font-bold text-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${isFeatured
             ? "bg-warm-gold text-champagne-foreground shadow-lg hover:shadow-xl"
             : "bg-secondary text-secondary-foreground hover:bg-champagne/40"
           }`}
@@ -111,10 +111,10 @@ const PackagesSection = () => {
   return (
     <section ref={ref} id="pacotes" className="py-14 md:py-24 px-5 md:px-12">
       <div className={`text-center mb-8 transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-        <h2 className="text-2xl md:text-4xl font-display font-semibold mb-2 text-foreground">
+        <h2 className="text-[1.75rem] md:text-4xl font-display font-semibold mb-3 text-foreground">
           Escolha seu pacote
         </h2>
-        <p className="text-sm md:text-base text-muted-foreground font-body max-w-lg mx-auto">
+        <p className="text-base md:text-lg text-muted-foreground font-body max-w-lg mx-auto">
           Pacotes pensados com carinho para registrar cada momento.
         </p>
       </div>

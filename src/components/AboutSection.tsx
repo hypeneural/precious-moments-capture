@@ -57,7 +57,7 @@ const AboutSection = () => {
                         Fundado por <strong>Anderson</strong> e <strong>Elaine</strong>, o Estúdio Evydência nasceu do amor pela fotografia e pela capacidade de eternizar momentos especiais.
                     </p>
                     <p className="text-sm md:text-base font-body text-muted-foreground leading-relaxed">
-                        Há mais de <strong className="text-foreground">12 anos</strong>, temos o privilégio de registrar histórias únicas e emocionantes. Cada ensaio é tratado com dedicação e sensibilidade, buscando capturar não apenas imagens, mas sentimentos genuínos.
+                        Há mais de <strong className="text-foreground">13 anos</strong>, temos o privilégio de registrar histórias únicas e emocionantes. Cada ensaio é tratado com dedicação e sensibilidade, buscando capturar não apenas imagens, mas sentimentos genuínos.
                     </p>
                     <div className="inline-flex items-center gap-2 pt-2">
                         <Heart className="w-4 h-4 text-warm-gold" fill="hsl(40 60% 65%)" />
