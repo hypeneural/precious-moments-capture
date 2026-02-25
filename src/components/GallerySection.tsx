@@ -23,10 +23,13 @@ const GallerySection = () => {
     <section ref={ref} id="galeria" className="py-16 md:py-24 bg-secondary/50">
       <div className={`px-5 md:px-12 mb-8 max-w-2xl mx-auto text-center transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
         <h2 className="text-2xl md:text-4xl font-display font-semibold mb-3 text-foreground">
-          Conheça o cenário
+          Inspiração do cenário
         </h2>
         <p className="text-sm md:text-base text-muted-foreground font-body">
           Um cenário pensado para diferentes composições: mãe & bebê, mãe & filho, ou toda a família.
+        </p>
+        <p className="text-xs text-muted-foreground/70 font-body mt-2 italic">
+          * Fotos ilustrativas de inspiração do cenário.
         </p>
       </div>
 

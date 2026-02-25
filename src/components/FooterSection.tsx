@@ -1,9 +1,28 @@
 import { STUDIO } from "@/lib/siteConfig";
-import { Instagram, MessageCircle } from "lucide-react";
+import { Instagram, MessageCircle, ShieldCheck, Clock, Award } from "lucide-react";
 
 const FooterSection = () => (
   <footer className="py-10 px-5 md:px-12 bg-secondary/80 pb-28 md:pb-10">
-    <div className="max-w-2xl mx-auto text-center space-y-4">
+    <div className="max-w-2xl mx-auto text-center space-y-6">
+      {/* Gatilhos mentais */}
+      <div className="grid grid-cols-3 gap-3 pb-6 border-b border-border">
+        <div className="flex flex-col items-center gap-1.5">
+          <ShieldCheck className="w-5 h-5 text-warm-gold" />
+          <span className="text-xs font-body font-bold text-foreground">Vagas limitadas</span>
+          <span className="text-[10px] text-muted-foreground font-body">10 primeiros ensaios</span>
+        </div>
+        <div className="flex flex-col items-center gap-1.5">
+          <Clock className="w-5 h-5 text-warm-gold" />
+          <span className="text-xs font-body font-bold text-foreground">Pré-venda</span>
+          <span className="text-[10px] text-muted-foreground font-body">Até {STUDIO.presaleDeadline}</span>
+        </div>
+        <div className="flex flex-col items-center gap-1.5">
+          <Award className="w-5 h-5 text-warm-gold" />
+          <span className="text-xs font-body font-bold text-foreground">Cenário exclusivo</span>
+          <span className="text-[10px] text-muted-foreground font-body">Edição limitada</span>
+        </div>
+      </div>
+
       <h3 className="text-lg font-display font-semibold text-foreground">{STUDIO.name}</h3>
       <p className="text-sm text-muted-foreground font-body">{STUDIO.city}</p>
 
